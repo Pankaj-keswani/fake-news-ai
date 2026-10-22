@@ -1,0 +1,7 @@
+**/venv
+**/.venv
+**/__pycache__
+**/.env
+_backup_original
+_tmp_test
+.git

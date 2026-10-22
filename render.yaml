@@ -1,0 +1,18 @@
+# One-click deploy on Render (https://render.com): New > Blueprint > pick this repo.
+services:
+  - type: web
+    name: fake-news-detector
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && gunicorn -c gunicorn.conf.py app:app
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: APP_ENV
+        value: production
+      - key: GROQ_API_KEY
+        sync: false        # you'll be asked to paste it in the Render dashboard
+      - key: FACTCHECK_API_KEY
+        sync: false        # optional, leave empty if you don't have one

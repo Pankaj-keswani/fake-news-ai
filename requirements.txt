@@ -1,0 +1,7 @@
+# Used by Vercel (root of the repo). Keep in sync with backend/requirements.txt.
+flask>=3.0,<4
+flask-cors>=4.0
+flask-limiter>=3.5
+python-dotenv>=1.0
+requests>=2.31
+beautifulsoup4>=4.12

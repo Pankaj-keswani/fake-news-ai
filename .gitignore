@@ -1,0 +1,15 @@
+# secrets
+.env
+backend/.env
+
+# python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# local leftovers
+_backup_original/
+_tmp_test/
+.DS_Store
+Thumbs.db
